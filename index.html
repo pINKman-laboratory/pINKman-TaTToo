@@ -191,8 +191,30 @@
             </div>
 
             <!-- KONTAKTNÍ FORMULÁŘ -->
-            <div class="bg-[#0f0f0f] p-8 border border-gray-800 relative overflow-hidden blue-glow">
-                <h3 class="section-title">Žádost o experiment</h3>
+           
+              <div class="bg-[#0f0f0f] p-12 border border-gray-800 blue-glow flex flex-col justify-center items-center text-center">
+    
+    <h3 class="section-title">Kontakt</h3>
+    
+    <p class="text-gray-400 mb-6 text-sm max-w-md">
+        Veškerá komunikace probíhá přes Instagram.  
+        Pošli zprávu s motivem, místem na těle a případně referencí.
+    </p>
+
+    <a href="https://instagram.com/p.INK.man" target="_blank" 
+       class="btn-lab flex items-center gap-3 text-lg">
+        
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07..."/>
+        </svg>
+
+        OTEVŘÍT INSTAGRAM
+    </a>
+<div class="mb-4 text-[10px] tracking-[4px] text-green-400 opacity-70">
+    [ CLASSIFIED ENTRY POINT ]
+</div>
+
+</div>  <h3 class="section-title">Žádost o experiment</h3>
                 <p class="text-gray-500 text-xs mb-6 italic">Vyplňte protokoly pro zahájení procesu.</p>
                 
                 <form class="space-y-4" onsubmit="return false;">
@@ -216,15 +238,41 @@
                         <label class="block text-[10px] uppercase text-gray-500 mb-1 tracking-widest">Specifikace (Místo, motiv, velikost)</label>
                         <textarea class="w-full p-3 h-32 font-mono text-sm" placeholder="Zadejte parametry tetování..."></textarea>
                     </div>
-
-                    <div class="border-2 border-dashed border-gray-800 p-6 text-center hover:border-[#00d2ff] transition cursor-pointer bg-black/30">
+<input type="file" id="fileUpload" multiple class="w-full text-sm text-gray-400">
                         <span class="text-[10px] text-gray-500 uppercase tracking-widest">Nahrát vizuální podklady (PNG/JPG)</span>
                     </div>
 
-                    <button type="submit" class="w-full btn-lab mt-4">
-                        Odeslat data do Labu
-                    </button>
-                </form>
+                    .btn-lab {
+    background: transparent;
+    border: 2px solid var(--toxic-green);
+    color: var(--toxic-green);
+    padding: 15px 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.btn-lab::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, var(--lab-glow), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.btn-lab:hover::before {
+    opacity: 1;
+}
+
+.btn-lab:hover {
+    box-shadow: 0 0 25px var(--toxic-green);
+    color: black;
+    background: var(--toxic-green);
+}
             </div>
         </div>
 
