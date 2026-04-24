@@ -1,0 +1,247 @@
+```html
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.INK.man Tattoo Lab | Ostrava Zábřeh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;500;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --h-blue: #00d2ff;
+            --dark-bg: #050505;
+            --panel-bg: #111111;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'JetBrains Mono', monospace;
+            overflow-x: hidden;
+        }
+
+        /* Sekce pro hlavní logo z obrázku 1000015536.png */
+        .main-logo-container {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .logo-img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.3));
+        }
+
+        .motto-box {
+            font-family: 'Permanent Marker', cursive;
+            color: #fff;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.3rem;
+            border-left: 3px solid var(--h-blue);
+            padding-left: 25px;
+            text-align: left;
+            background: linear-gradient(90deg, rgba(0,210,255,0.05) 0%, transparent 100%);
+        }
+
+        .motto-highlight {
+            color: var(--h-blue);
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .blue-glow {
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
+            border: 1px solid rgba(0, 210, 255, 0.2);
+        }
+
+        .section-title {
+            color: var(--h-blue);
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        input, textarea {
+            background: #1a1a1a !important;
+            border: 1px solid #333 !important;
+            color: white !important;
+            border-radius: 0px !important;
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--h-blue) !important;
+            outline: none !important;
+            box-shadow: 0 0 10px rgba(0, 210, 255, 0.2) !important;
+        }
+
+        .btn-lab {
+            background: transparent;
+            border: 2px solid var(--h-blue);
+            color: var(--h-blue);
+            padding: 15px 30px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-lab:hover {
+            background: var(--h-blue);
+            color: black;
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.5);
+        }
+
+        .price-tag {
+            font-family: 'Orbitron', sans-serif;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <div class="w-full h-1 bg-gradient-to-r from-transparent via-[#00d2ff] to-transparent opacity-50"></div>
+
+    <div class="container mx-auto px-4 max-w-6xl">
+        
+        <header class="text-center py-12">
+            <!-- Hlavní Logo (Odkaz na tvůj nahraný soubor) -->
+            <div class="main-logo-container mb-12">
+                <img src="1000015536.png" alt="P.INK.man Tattoo Lab Logo" class="logo-img">
+            </div>
+
+            <!-- Vylepšené Motto -->
+            <div class="motto-box italic">
+                "Nejsme žádný 'salón' ani 'studio', nestříháme pejsky, nečančáme holky na školní ples, neděláme relaxační procedury. 
+                <span class="motto-highlight">
+                    Tetování od nás má svou duši a kouzlo, které vzniká na pomezí undergroundu a ilegality, odkud původně pochází. Respektuj kůži, uctívej proces.
+                </span>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-16">
+            
+            <div class="space-y-10">
+                
+                <section>
+                    <h3 class="section-title">
+                        <span class="w-2 h-2 bg-[#00d2ff]"></span> Lokalita
+                    </h3>
+                    <div class="bg-[#111] p-6 blue-glow border-l-4 border-[#00d2ff]">
+                        <p class="text-3xl font-black tracking-tighter">OSTRAVA ZÁBŘEH !!!</p>
+                        <p class="text-gray-500 mt-2 uppercase text-xs tracking-widest">Přístup pouze pro registrované subjekty</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="section-title">
+                        <span class="w-2 h-2 bg-[#00d2ff]"></span> Odhadované náklady
+                    </h3>
+                    <div class="bg-[#111] p-8 blue-glow space-y-6">
+                        <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                            <div>
+                                <span class="block text-lg font-bold">Malé tetování</span>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest text-[#00d2ff]">Do 5cm (Mikro vzorek)</span>
+                            </div>
+                            <span class="text-2xl price-tag text-[#00d2ff]">od 1.000 Kč</span>
+                        </div>
+
+                        <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                            <div>
+                                <span class="block text-lg font-bold">Střední rozsah</span>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest text-[#00d2ff]">Velikost dlaně</span>
+                            </div>
+                            <span class="text-2xl price-tag text-[#00d2ff]">od 3.000 Kč</span>
+                        </div>
+
+                        <div class="flex justify-between items-end border-b border-gray-800 pb-2">
+                            <div>
+                                <span class="block text-lg font-bold">Velké práce</span>
+                                <span class="text-[10px] text-gray-500 uppercase tracking-widest text-[#00d2ff]">Komplexní projekty</span>
+                            </div>
+                            <span class="text-2xl price-tag text-[#00d2ff]">6.000+ Kč</span>
+                        </div>
+
+                        <p class="text-[10px] text-gray-500 italic leading-relaxed">
+                            POZNÁMKA: Ceny jsou orientační. Každá práce bude přesně naceněna individuálně dle návrhu a náročnosti.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="section-title">
+                        <span class="w-2 h-2 bg-[#00d2ff]"></span> Metody aplikace
+                    </h3>
+                    <div class="flex gap-4 flex-wrap">
+                        <span class="bg-[#1a1a1a] px-4 py-2 border border-gray-800 text-[10px] font-bold">BLACKWORK</span>
+                        <span class="bg-[#1a1a1a] px-4 py-2 border border-gray-800 text-[10px] font-bold">FINE-LINE</span>
+                        <span class="bg-[#1a1a1a] px-4 py-2 border border-gray-800 text-[10px] font-bold">LINEWORK</span>
+                        <span class="bg-[#1a1a1a] px-4 py-2 border border-gray-800 text-[10px] font-bold">COMIC / DOTWORK</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- KONTAKTNÍ FORMULÁŘ -->
+            <div class="bg-[#0f0f0f] p-8 border border-gray-800 relative overflow-hidden blue-glow">
+                <h3 class="section-title">Žádost o experiment</h3>
+                <p class="text-gray-500 text-xs mb-6 italic">Vyplňte protokoly pro zahájení procesu.</p>
+                
+                <form class="space-y-4" onsubmit="return false;">
+                    <div>
+                        <label class="block text-[10px] uppercase text-gray-500 mb-1 tracking-widest">Identifikace (Jméno)</label>
+                        <input type="text" class="w-full p-3 font-mono text-sm" placeholder="Subject Name">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] uppercase text-gray-500 mb-1 tracking-widest">Email</label>
+                            <input type="email" class="w-full p-3 font-mono text-sm" placeholder="contact@domain.cz">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase text-gray-500 mb-1 tracking-widest">Telefon</label>
+                            <input type="tel" class="w-full p-3 font-mono text-sm" placeholder="+420 ...">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] uppercase text-gray-500 mb-1 tracking-widest">Specifikace (Místo, motiv, velikost)</label>
+                        <textarea class="w-full p-3 h-32 font-mono text-sm" placeholder="Zadejte parametry tetování..."></textarea>
+                    </div>
+
+                    <div class="border-2 border-dashed border-gray-800 p-6 text-center hover:border-[#00d2ff] transition cursor-pointer bg-black/30">
+                        <span class="text-[10px] text-gray-500 uppercase tracking-widest">Nahrát vizuální podklady (PNG/JPG)</span>
+                    </div>
+
+                    <button type="submit" class="w-full btn-lab mt-4">
+                        Odeslat data do Labu
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <footer class="mt-24 pt-12 border-t border-gray-900 text-center">
+            <div class="mb-8">
+                <a href="https://instagram.com/p.INK.man" target="_blank" class="inline-flex items-center gap-3 text-2xl font-black hover:text-[#00d2ff] transition tracking-tighter">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.058-1.69-.072-4.949-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    INSTAGRAM / p.INK.man
+                </a>
+            </div>
+            <p class="text-[10px] text-gray-600 tracking-[5px] uppercase">
+                &copy; 2024 P.INK.man Tattoo Lab // Ostrava-Zábřeh // Authentic Underground
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+```
