@@ -1,2 +1,0 @@
-# pINKman-TaTToo
-Tetování 
